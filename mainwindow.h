@@ -33,6 +33,10 @@ private slots:
 
     void onButtonSend();
 
+//    void onButtonSend_list();
+public slots:
+    void slotDataOnStdoutList();
+
 private:
     Ui::MainWindow *ui;
     QString str_cmd;

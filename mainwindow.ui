@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>680</width>
-    <height>622</height>
+    <width>676</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -225,14 +225,37 @@
      </property>
     </widget>
    </widget>
+   <widget class="QLineEdit" name="cmd_comand">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>350</y>
+      <width>641</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="ListDistro">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>10</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>680</width>
-     <height>20</height>
+     <width>676</width>
+     <height>23</height>
     </rect>
    </property>
   </widget>

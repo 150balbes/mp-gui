@@ -12,8 +12,5 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
-//    Shell dial;
-//    dial.show();
-
     return a.exec();
 }
