@@ -24,13 +24,6 @@ MainWindow::MainWindow(QWidget *parent) :
 //    connect(ui->pushButton_ListInit, SIGNAL(clicked()), myform, SLOT(show()));
 //    connect(ui->pushButton_ListInit, SIGNAL(clicked()), this, SLOT(onButtonSend_list()));
 
-//    ui->comboBox_repo->addItem("rsync://ftp.altlinux.org/ALTLinux/p7/branch/");
-//    ui->comboBox_repo->addItem("rsync://ftp.heanet.ie/mirrors/ftp.altlinux.org/p7/branch/");
-//    ui->comboBox_repo->addItem("rsync://pspo.fcior.edu.ru/ALTLinux/p7/branch/");
-//    ui->comboBox_repo->addItem("rsync://distrib-coffee.ipsl.jussieu.fr/pub/linux/altlinux/p7/branch/");
-//    ui->comboBox_repo->addItem("rsync://ftp.linux.kiev.ua/ALTLinux/p7/branch/");
-//    ui->comboBox_repo->addItem("rsync://mirror.yandex.ru/altlinux/p7/branch/");
-
 }
 
 MainWindow::~MainWindow()
@@ -40,7 +33,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::onButtonSend()
 {
-    str_make = "make ARCH=" + ui->cb_arch->currentText() + " -C " + ui->DirProfiles->text() + " " + ui->comboBox_ListDistro->currentText();
+    str_make = "make ARCH=" + ui->cb_arch->currentText() + " APTCONF=" + ui->AptConf->text() + " -C " + ui->DirProfiles->text() + " " + ui->comboBox_ListDistro->currentText();
     emit sendData(str_make);
 }
 
@@ -78,4 +71,10 @@ void MainWindow::on_pushButton_ListInit_clicked()
     str_make = "make -C " + ui->DirProfiles->text() + " help";
     make_process->start(str_make);
 
+}
+
+void MainWindow::on_pushButton_AptConf_clicked()
+{
+    QString str = QFileDialog::getOpenFileName(0, "Open Dialog", "~/");
+    ui->AptConf->setText(str);
 }

@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>446</width>
-    <height>574</height>
+    <width>444</width>
+    <height>486</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,9 +19,9 @@
   <widget class="QLineEdit" name="m_ptxtCommand">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>530</y>
-     <width>231</width>
+     <x>10</x>
+     <y>40</y>
+     <width>421</width>
      <height>22</height>
     </rect>
    </property>
@@ -29,24 +29,50 @@
   <widget class="QTextEdit" name="m_ptxtDisplay">
    <property name="geometry">
     <rect>
-     <x>13</x>
-     <y>40</y>
+     <x>10</x>
+     <y>70</y>
      <width>421</width>
-     <height>471</height>
+     <height>371</height>
     </rect>
    </property>
   </widget>
   <widget class="QPushButton" name="pcmd">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>530</y>
-     <width>100</width>
-     <height>23</height>
+     <x>10</x>
+     <y>450</y>
+     <width>151</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>Выполнить</string>
+    <string>Запуск сборки</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>241</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Сборочная комманда</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>450</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Выход</string>
    </property>
   </widget>
  </widget>

@@ -37,4 +37,7 @@ void Form::slotReturnPressed()
     m_process->start(strCommand);
 }
 
-
+void Form::on_pushButton_clicked()
+{
+    close();
+}

@@ -27,6 +27,8 @@ public slots:
 
     void recieveData(QString str);
 
+private slots:
+    void on_pushButton_clicked();
 };
 
 #endif // FORM_H

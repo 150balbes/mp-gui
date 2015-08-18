@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>676</width>
-    <height>618</height>
+    <width>674</width>
+    <height>470</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>540</x>
-      <y>530</y>
+      <y>360</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -27,34 +27,11 @@
      <string>Выход</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_repo">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>310</y>
-      <width>651</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>280</y>
-      <width>171</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Исходный репозиторий</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_RunCreate">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>530</y>
+      <y>360</y>
       <width>261</width>
       <height>41</height>
      </rect>
@@ -62,44 +39,6 @@
     <property name="text">
      <string>Запуск сборки выбранного образа</string>
     </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>240</y>
-      <width>71</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ветка</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="cb_branch">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>240</y>
-      <width>191</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>Sisyphus</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>p7</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>t7</string>
-     </property>
-    </item>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
@@ -225,16 +164,6 @@
      </property>
     </widget>
    </widget>
-   <widget class="QLineEdit" name="cmd_comand">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>350</y>
-      <width>641</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QTextEdit" name="ListDistro">
     <property name="enabled">
      <bool>false</bool>
@@ -248,13 +177,52 @@
      </rect>
     </property>
    </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>661</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Выбор файла настроек apt.conf, если не указано, будут использоваться системные настройки.</string>
+    </property>
+    <widget class="QLineEdit" name="AptConf">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>531</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_AptConf">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>30</y>
+       <width>101</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Обзор</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>676</width>
+     <width>674</width>
      <height>23</height>
     </rect>
    </property>
