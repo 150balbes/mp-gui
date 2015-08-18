@@ -6,6 +6,7 @@
 #include <QStringList>
 #include <QFile>
 #include <QTextStream>
+#include <QCheckBox>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -33,7 +34,37 @@ MainWindow::~MainWindow()
 
 void MainWindow::onButtonSend()
 {
-    str_make = "make ARCH=" + ui->cb_arch->currentText() + " APTCONF=" + ui->AptConf->text() + " -C " + ui->DirProfiles->text() + " " + ui->comboBox_ListDistro->currentText();
+    QString str_check;
+    if (ui->checkBox_Check->checkState())
+    {
+        str_check = " CHECK=1";
+    }
+    else
+    {
+        str_check = "";
+    }
+
+    QString str_builddir;
+    if (ui->BuildDir->text() != "")
+    {
+        str_builddir = " BUILDDIR=" + ui->BuildDir->text();
+    }
+    else
+    {
+        str_builddir = "";
+    }
+
+    QString str_aptconf;
+    if (ui->AptConf->text() != "")
+    {
+        str_aptconf = " APTCONF=" + ui->AptConf->text();
+    }
+    else
+    {
+        str_aptconf = "";
+    }
+
+    str_make = "make ARCH=" + ui->cb_arch->currentText() + str_check + str_aptconf + str_builddir + " -C " + ui->DirProfiles->text() + " " + ui->comboBox_ListDistro->currentText();
     emit sendData(str_make);
 }
 
@@ -77,4 +108,10 @@ void MainWindow::on_pushButton_AptConf_clicked()
 {
     QString str = QFileDialog::getOpenFileName(0, "Open Dialog", "~/");
     ui->AptConf->setText(str);
+}
+
+void MainWindow::on_pushButton_BuildDir_clicked()
+{
+    QString str = QFileDialog::getExistingDirectory(0, "Directory Dialog", "~/");
+    ui->BuildDir->setText(str);
 }

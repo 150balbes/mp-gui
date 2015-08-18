@@ -36,6 +36,8 @@ private slots:
 //    void onButtonSend_list();
     void on_pushButton_AptConf_clicked();
 
+    void on_pushButton_BuildDir_clicked();
+
 public slots:
     void slotDataOnStdoutList();
 
