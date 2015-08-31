@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>668</width>
-    <height>505</height>
+    <width>670</width>
+    <height>495</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -90,7 +90,7 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>541</width>
+       <width>261</width>
        <height>22</height>
       </rect>
      </property>
@@ -104,7 +104,7 @@
     <widget class="QPushButton" name="pushButton_DirProfiles">
      <property name="geometry">
       <rect>
-       <x>560</x>
+       <x>280</x>
        <y>30</y>
        <width>100</width>
        <height>23</height>
@@ -112,6 +112,19 @@
      </property>
      <property name="text">
       <string>Обзор</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_git">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>30</y>
+       <width>271</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Получить последнюю версию  мета-профиля</string>
      </property>
     </widget>
    </widget>
@@ -198,6 +211,9 @@
        <height>22</height>
       </rect>
      </property>
+     <property name="text">
+      <string/>
+     </property>
      <property name="readOnly">
       <bool>false</bool>
      </property>
@@ -268,13 +284,26 @@
      <string>Режим проверки без сборки образа</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>360</y>
+      <width>361</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>668</width>
+     <width>670</width>
      <height>23</height>
     </rect>
    </property>

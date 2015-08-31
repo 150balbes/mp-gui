@@ -33,10 +33,13 @@ private slots:
 
     void onButtonSend();
 
-//    void onButtonSend_list();
+//    void onButtonSend_git();
+
     void on_pushButton_AptConf_clicked();
 
     void on_pushButton_BuildDir_clicked();
+
+    void on_pushButton_git_clicked();
 
 public slots:
     void slotDataOnStdoutList();

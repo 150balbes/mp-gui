@@ -7,6 +7,8 @@
 #include <QFile>
 #include <QTextStream>
 #include <QCheckBox>
+#include <QMessageBox>
+#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -22,8 +24,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_RunCreate, SIGNAL(clicked()), this, SLOT(onButtonSend()));
     connect(this, SIGNAL(sendData(QString)), myform, SLOT(recieveData(QString)));
 
-//    connect(ui->pushButton_ListInit, SIGNAL(clicked()), myform, SLOT(show()));
-//    connect(ui->pushButton_ListInit, SIGNAL(clicked()), this, SLOT(onButtonSend_list()));
+//    connect(ui->pushButton_git, SIGNAL(clicked()), myform, SLOT(show()));
+//    connect(ui->pushButton_git, SIGNAL(clicked()), this, SLOT(onButtonSend_git()));
 
 }
 
@@ -114,4 +116,28 @@ void MainWindow::on_pushButton_BuildDir_clicked()
 {
     QString str = QFileDialog::getExistingDirectory(0, "Directory Dialog", "~/");
     ui->BuildDir->setText(str);
+}
+
+//void MainWindow::onButtonSend_git()
+//{
+//    str_make = "git clone git://git.altlinux.org/people/mike/packages/mkimage-profiles.git";
+//    emit sendData(str_make);
+//}
+
+
+void MainWindow::on_pushButton_git_clicked()
+{
+    QDir dir_mp(QDir::homePath()+"/mkimage-profiles");
+    if (!QDir(dir_mp).exists())
+       {
+            char *str_cmd = "git clone git://git.altlinux.org/people/mike/packages/mkimage-profiles.git ~/mkimage-profiles";
+            system(str_cmd);
+            ui->DirProfiles->setText("~/mkimage-profiles");
+        }
+    else
+        {
+            QMessageBox msgBox;
+            msgBox.setText("Каталог mkimage-profiles уже существует.");
+            msgBox.exec();
+    }
 }
