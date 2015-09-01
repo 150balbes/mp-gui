@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=GUI m-p
+Name[ru]=Оболочка для m-p
+GenericName=GUI m-p
+GenericName[ru]=Оболочка для m-p
+Comment=Make distributive m-p
+Comment[ru]=Оболочка для сборки дистрибутивов из m-p
+Exec=mp-gui %U
+Type=Application
+Icon=mp-gui
+Categories=Development;IDE;
