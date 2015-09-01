@@ -36,6 +36,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::onButtonSend()
 {
+    QDir dir_out(QDir::homePath()+"/out");
+    if (!QDir(dir_out).exists())
+    {
+        QDir dir;
+        dir.mkdir(QDir::homePath()+"/out");
+    }
+
     QString str_check;
     if (ui->checkBox_Check->checkState())
     {
