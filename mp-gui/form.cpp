@@ -8,6 +8,7 @@ Form::Form(QWidget *parent) :
     ui->setupUi(this);
 
     m_process = new QProcess(this);
+    m_process->setProcessChannelMode(QProcess::MergedChannels);
 
     connect(m_process, SIGNAL(readyReadStandardOutput()), SLOT(slotDataOnStdout()));
     connect(ui->m_ptxtCommand, SIGNAL(returnPressed()), SLOT(slotReturnPressed()));
@@ -27,7 +28,7 @@ void Form::recieveData(QString str)
 
 void Form::slotDataOnStdout()
 {
-    ui->m_ptxtDisplay->append(m_process->readAllStandardOutput());
+    ui->m_ptxtDisplay->append(m_process->readAll());
 }
 
 void Form::slotReturnPressed()

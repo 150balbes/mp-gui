@@ -33,8 +33,6 @@ private slots:
 
     void onButtonSend();
 
-//    void onButtonSend_git();
-
     void on_pushButton_AptConf_clicked();
 
     void on_pushButton_BuildDir_clicked();
@@ -48,6 +46,7 @@ private:
     Ui::MainWindow *ui;
     QString str_cmd;
     QString str_make;
+    QStringList strList;
     QString program_make;
     QProcess*  make_process;
 

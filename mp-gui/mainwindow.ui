@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>668</width>
-    <height>493</height>
+    <width>666</width>
+    <height>611</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="pushButton_Exit">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>410</y>
+      <x>540</x>
+      <y>510</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>410</y>
+      <y>510</y>
       <width>261</width>
       <height>41</height>
      </rect>
@@ -177,19 +177,6 @@
      </property>
     </widget>
    </widget>
-   <widget class="QTextEdit" name="ListDistro">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>10</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
@@ -297,13 +284,36 @@
      <string/>
     </property>
    </widget>
+   <widget class="QPlainTextEdit" name="ListDistro">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>370</y>
+      <width>281</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="plainText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>370</y>
+      <width>271</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>668</width>
+     <width>666</width>
      <height>23</height>
     </rect>
    </property>
