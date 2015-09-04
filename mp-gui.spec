@@ -2,7 +2,7 @@ BuildRequires: desktop-file-utils
 
 Name:		mp-gui
 Version:	0.0.1
-Release:	alt4
+Release:	alt5
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -43,6 +43,9 @@ install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 %_liconsdir/*
 
 %changelog
+* Tue Sep 03 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.1-alt5
+- new version
+
 * Tue Sep 03 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.1-alt4
 - Edit files
 
