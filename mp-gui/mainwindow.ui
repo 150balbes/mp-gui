@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>677</width>
+    <width>744</width>
     <height>484</height>
    </rect>
   </property>
@@ -32,7 +32,7 @@
      <rect>
       <x>10</x>
       <y>390</y>
-      <width>221</width>
+      <width>261</width>
       <height>31</height>
      </rect>
     </property>
@@ -58,7 +58,7 @@
      <rect>
       <x>130</x>
       <y>10</y>
-      <width>131</width>
+      <width>71</width>
       <height>23</height>
      </rect>
     </property>
@@ -78,7 +78,7 @@
      <rect>
       <x>10</x>
       <y>40</y>
-      <width>661</width>
+      <width>721</width>
       <height>61</height>
      </rect>
     </property>
@@ -119,7 +119,7 @@
       <rect>
        <x>390</x>
        <y>30</y>
-       <width>271</width>
+       <width>321</width>
        <height>25</height>
       </rect>
      </property>
@@ -156,7 +156,7 @@
      <rect>
       <x>10</x>
       <y>170</y>
-      <width>661</width>
+      <width>721</width>
       <height>61</height>
      </rect>
     </property>
@@ -168,7 +168,7 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>531</width>
+       <width>581</width>
        <height>22</height>
       </rect>
      </property>
@@ -182,7 +182,7 @@
     <widget class="QPushButton" name="pushButton_AptConf">
      <property name="geometry">
       <rect>
-       <x>550</x>
+       <x>610</x>
        <y>30</y>
        <width>101</width>
        <height>25</height>
@@ -198,17 +198,17 @@
      <rect>
       <x>10</x>
       <y>240</y>
-      <width>661</width>
-      <height>61</height>
+      <width>721</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="title">
-     <string>Выбор каталога  генерируемого профиля и сборки, если не выбрано - автовыбор</string>
+     <string>Выбор каталога  для генерируемого профиля и сборки, если не указан - автовыбор системой.</string>
     </property>
     <widget class="QPushButton" name="pushButton_BuildDir">
      <property name="geometry">
       <rect>
-       <x>550</x>
+       <x>610</x>
        <y>30</y>
        <width>101</width>
        <height>25</height>
@@ -223,7 +223,7 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>531</width>
+       <width>581</width>
        <height>22</height>
       </rect>
      </property>
@@ -235,9 +235,9 @@
    <widget class="QCheckBox" name="checkBox_Check">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>230</x>
       <y>10</y>
-      <width>221</width>
+      <width>311</width>
       <height>20</height>
      </rect>
     </property>
@@ -264,7 +264,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>677</width>
+     <width>744</width>
      <height>23</height>
     </rect>
    </property>
