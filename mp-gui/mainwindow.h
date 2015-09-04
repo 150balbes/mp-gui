@@ -29,8 +29,6 @@ private slots:
 
     void on_pushButton_Exit_clicked();
 
-    void on_pushButton_ListInit_clicked();
-
     void onButtonSend();
 
     void on_pushButton_AptConf_clicked();

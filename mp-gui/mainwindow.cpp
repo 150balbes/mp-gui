@@ -3,13 +3,11 @@
 #include <QFileDialog>
 #include <QProcess>
 #include <QString>
-#include <QStringList>
 #include <QFile>
 #include <QTextStream>
 #include <QCheckBox>
 #include <QMessageBox>
 #include <QDir>
-#include <QPlainTextEdit>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -27,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_RunCreate, SIGNAL(clicked()), this, SLOT(onButtonSend()));
     connect(this, SIGNAL(sendData(QString)), myform, SLOT(recieveData(QString)));
 
+    str_make = "make -C " + ui->DirProfiles->text() + " help>/tmp/distro";
+    make_process->start(str_make);
 }
 
 MainWindow::~MainWindow()
@@ -81,40 +81,33 @@ void MainWindow::on_pushButton_DirProfiles_clicked()
 {
     QString str = QFileDialog::getExistingDirectory(0, "Directory Dialog", "~/");
     ui->DirProfiles->setText(str);
-}
-
-void MainWindow::on_pushButton_Exit_clicked()
-{
-    close();
+    ui->comboBox_ListDistro->clear();
+    str_make = "make -C " + ui->DirProfiles->text() + " help>/tmp/distro";
+    make_process->start(str_make);
 }
 
 void MainWindow::slotDataOnStdoutList()
 {
-    ui->ListDistro->appendPlainText(make_process->readAll());
-    str_cmd = ui->ListDistro->toPlainText();
-    str_cmd.simplified();
-//    QString str_cmd1 = str_cmd.simplified();
-    ui->plainTextEdit->appendPlainText(str_cmd);
-    strList=str_cmd.split('\n', QString::SkipEmptyParts);
-    strList.sort();
-    strList.removeDuplicates();
-    QString str;
-    for (int i=0; i < strList.size(); ++i)
-    {
-        str = strList.at(i);
-//        if (str.left(5) != "make:" )
-        if (!str.startsWith("make:"))
-                ui->comboBox_ListDistro->addItem(str);
-    }
-}
 
-void MainWindow::on_pushButton_ListInit_clicked()
-{
-    ui->comboBox_ListDistro->clear();
-    ui->ListDistro->clear();
-    ui->plainTextEdit->clear();
-    str_make = "make -C " + ui->DirProfiles->text() + " help";
-    make_process->start(str_make);
+    str_cmd = "/tmp/distro";
+    QFile file(str_cmd);
+    if(file.open(QIODevice::ReadOnly))
+    {
+        QTextStream stream(&file);
+        QString str;
+        while (!stream.atEnd())
+            {
+               str = stream.readLine();
+               ui->comboBox_ListDistro->addItem(str);
+            }
+            if(stream.status()!= QTextStream::Ok)
+            {
+//                qDebug() << "Ошибка чтения файла";
+//                   ui->label_7->setText("Ошибка чтения файла");
+            }
+            file.close();
+
+    }
 }
 
 void MainWindow::on_pushButton_AptConf_clicked()
@@ -144,4 +137,9 @@ void MainWindow::on_pushButton_git_clicked()
             msgBox.setText("Каталог mkimage-profiles уже существует.");
             msgBox.exec();
     }
+}
+
+void MainWindow::on_pushButton_Exit_clicked()
+{
+    close();
 }
