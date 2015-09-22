@@ -25,6 +25,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_RunCreate, SIGNAL(clicked()), this, SLOT(onButtonSend()));
     connect(this, SIGNAL(sendData(QString)), myform, SLOT(recieveData(QString)));
 
+    ui->comboBox_ListDistro->clear();
     str_make = "make -C " + ui->DirProfiles->text() + " help>/tmp/distro";
     make_process->start(str_make);
 }
