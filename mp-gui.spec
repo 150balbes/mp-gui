@@ -1,8 +1,6 @@
-BuildRequires: desktop-file-utils
-
 Name:		mp-gui
 Version:	0.0.1
-Release:	alt9
+Release:	alt10
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -17,7 +15,7 @@ Source2:	%name.desktop
 Source3:	%name.png
 
 
-BuildRequires: gcc-c++ libqt4-devel
+BuildRequires: gcc-c++ libqt4-devel desktop-file-utils
 Requires: mkimage-profiles qt4-styles-qtcurve
 
 %description
@@ -43,6 +41,9 @@ install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 %_liconsdir/*
 
 %changelog
+* Tue Sep 23 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.1-alt10
+- add requires qt4-styles-qtcurve
+
 * Tue Sep 23 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.1-alt9
 - add options BUILDDIR_NO_RM
 
