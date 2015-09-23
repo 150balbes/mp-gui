@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>744</width>
-    <height>484</height>
+    <width>742</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -124,7 +124,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Получить последнюю версию  мета-профиля</string>
+      <string>Скачать последнюю версию  мета-профиля</string>
      </property>
     </widget>
    </widget>
@@ -264,8 +264,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>744</width>
-     <height>23</height>
+     <width>742</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
