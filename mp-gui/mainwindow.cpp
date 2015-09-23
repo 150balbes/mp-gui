@@ -25,7 +25,6 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_RunCreate, SIGNAL(clicked()), this, SLOT(onButtonSend()));
     connect(this, SIGNAL(sendData(QString)), myform, SLOT(recieveData(QString)));
 
-    ui->comboBox_ListDistro->clear();
     str_make = "make -C " + ui->DirProfiles->text() + " help>/tmp/distro";
     make_process->start(str_make);
 }
@@ -82,14 +81,13 @@ void MainWindow::on_pushButton_DirProfiles_clicked()
 {
     QString str = QFileDialog::getExistingDirectory(0, "Directory Dialog", "~/");
     ui->DirProfiles->setText(str);
-    ui->comboBox_ListDistro->clear();
     str_make = "make -C " + ui->DirProfiles->text() + " help>/tmp/distro";
     make_process->start(str_make);
 }
 
 void MainWindow::slotDataOnStdoutList()
 {
-
+    ui->comboBox_ListDistro->clear();
     str_cmd = "/tmp/distro";
     QFile file(str_cmd);
     if(file.open(QIODevice::ReadOnly))
