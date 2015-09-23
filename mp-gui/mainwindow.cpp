@@ -25,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_RunCreate, SIGNAL(clicked()), this, SLOT(onButtonSend()));
     connect(this, SIGNAL(sendData(QString)), myform, SLOT(recieveData(QString)));
 
+    char *prog = "rm -f /tmp/distro";
+    system(prog);
     str_make = "make -C " + ui->DirProfiles->text() + " help>/tmp/distro";
     make_process->start(str_make);
 }
@@ -84,6 +86,8 @@ void MainWindow::on_pushButton_DirProfiles_clicked()
 {
     QString str = QFileDialog::getExistingDirectory(0, "Directory Dialog", "~/");
     ui->DirProfiles->setText(str);
+    char *prog = "rm -f /tmp/distro";
+    system(prog);
     str_make = "make -C " + ui->DirProfiles->text() + " help>/tmp/distro";
     make_process->start(str_make);
 }
