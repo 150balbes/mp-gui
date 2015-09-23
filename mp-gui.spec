@@ -18,7 +18,7 @@ Source3:	%name.png
 
 
 BuildRequires: gcc-c++ libqt4-devel
-Requires: mkimage-profiles
+Requires: mkimage-profiles qt4-styles-qtcurve
 
 %description
 Graphical application for mkimage-profiles.
