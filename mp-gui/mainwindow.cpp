@@ -8,11 +8,14 @@
 #include <QCheckBox>
 #include <QMessageBox>
 #include <QDir>
+#include <QSettings>
+#include <QRect>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
 
     make_process = new QProcess(this);
@@ -106,12 +109,12 @@ void MainWindow::slotDataOnStdoutList()
                str = stream.readLine();
                ui->comboBox_ListDistro->addItem(str);
             }
-            if(stream.status()!= QTextStream::Ok)
-            {
+//        if(stream.status()!= QTextStream::Ok)
+//            {
 //                qDebug() << "Ошибка чтения файла";
 //                   ui->label_7->setText("Ошибка чтения файла");
-            }
-            file.close();
+//            }
+        file.close();
 
     }
 }
@@ -149,3 +152,33 @@ void MainWindow::on_pushButton_Exit_clicked()
 {
     close();
 }
+
+void MainWindow::on_pushButton_Settings_clicked()
+{
+    QSettings settings("mp-gui","mp-gui");
+//    settings.setValue("geometry", geometry());
+    settings.setValue("dir_profiles", ui->DirProfiles->text());
+    settings.setValue("apt_conf", ui->AptConf->text());
+    settings.setValue("dir_build", ui->BuildDir->text());
+}
+
+void MainWindow::on_pushButton_RedSet_clicked()
+{
+    QSettings settings("mp-gui","mp-gui");
+//    QRect rect = settings.value("geometry", QRect(0, 0, 740, 480)).toRect();
+//    move(rect.topLeft());
+//    resize(rect.size());
+    QString profil_set = settings.value("dir_profiles").toString();
+    ui->DirProfiles->setText(profil_set);
+    QString apt_set = settings.value("apt_conf").toString();
+    ui->AptConf->setText(apt_set);
+    QString build_set = settings.value("dir_build").toString();
+    ui->BuildDir->setText(build_set);
+
+    char *prog = "rm -f /tmp/distro";
+    system(prog);
+    str_make = "make -C " + ui->DirProfiles->text() + " help>/tmp/distro";
+    make_process->start(str_make);
+
+}
+

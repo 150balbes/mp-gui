@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>742</width>
-    <height>482</height>
+    <width>740</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <widget class="QPushButton" name="pushButton_Exit">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>640</x>
       <y>390</y>
       <width>91</width>
       <height>31</height>
@@ -258,13 +258,39 @@
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_Settings">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>390</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сохранить настройки</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_RedSet">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>390</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Загрузить настройки</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>742</width>
+     <width>740</width>
      <height>21</height>
     </rect>
    </property>

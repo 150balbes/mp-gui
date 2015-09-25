@@ -37,6 +37,10 @@ private slots:
 
     void on_pushButton_git_clicked();
 
+    void on_pushButton_Settings_clicked();
+
+    void on_pushButton_RedSet_clicked();
+
 public slots:
     void slotDataOnStdoutList();
 
