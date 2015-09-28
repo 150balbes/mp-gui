@@ -1,6 +1,6 @@
 Name:		mp-gui
-Version:	0.0.1
-Release:	alt11
+Version:	0.0.2
+Release:	alt1
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -41,6 +41,9 @@ install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 %_liconsdir/*
 
 %changelog
+* Tue Sep 28 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt1
+- new version
+
 * Tue Sep 25 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.1-alt11
 - add save settings
 

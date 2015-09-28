@@ -48,29 +48,6 @@ void MainWindow::onButtonSend()
         dir.mkdir(QDir::homePath()+"/out");
     }
 
-    QString str_check;
-    if (ui->checkBox_Check->checkState())
-    {
-        str_check = " CHECK=1";
-    }
-    else
-    {
-        str_check = "";
-    }
-
-    QString str_builddir;
-    QString str_check_rm;
-    if (ui->BuildDir->text() != "")
-    {
-        str_builddir = " BUILDDIR=" + ui->BuildDir->text();
-        str_check_rm = " BUILDDIR_NO_RM=1";
-    }
-    else
-    {
-        str_builddir = "";
-        str_check = "";
-    }
-
     QString str_aptconf;
     if (ui->AptConf->text() != "")
     {
@@ -81,7 +58,38 @@ void MainWindow::onButtonSend()
         str_aptconf = "";
     }
 
-    str_make = "make ARCH=" + ui->cb_arch->currentText() + str_check + str_aptconf + str_builddir + str_check_rm + " -C " + ui->DirProfiles->text() + " " + ui->comboBox_ListDistro->currentText();
+    QString str_check;
+    if (ui->checkBox_Check->checkState())
+    {
+        str_check = " CHECK=1";
+    }
+    else
+    {
+        str_check = "";
+    }
+
+    QString str_pro;
+    QString str_builddir;
+    QString str_profiles;
+    str_profiles = ui->DirProfiles->text();
+    if (ui->BuildDir->text() != "")
+    {
+        str_builddir = " BUILDDIR_NO_RM=1 BUILDDIR=" + ui->BuildDir->text();
+    }
+    else
+    {
+        str_builddir = "";
+    }
+
+    if (ui->checkBox_ReMake->checkState())
+    {
+        str_pro = " -C " + ui->BuildDir->text();
+    }
+    else
+    {
+        str_pro = "ARCH=" + ui->cb_arch->currentText() + str_builddir + " -C " + str_profiles  + " " + ui->comboBox_ListDistro->currentText();
+    }
+    str_make = "make " + str_check + str_aptconf + str_pro;
     emit sendData(str_make);
 }
 
