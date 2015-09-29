@@ -44,6 +44,13 @@ void MainWindow::onButtonSend()
     QString str_mirror;
     if (ui->checkBox_mirror->checkState())
     {
+        QDir dir_out1("/var/ftp/ALTLinux");
+        if (!QDir(dir_out1).exists())
+        {
+            QDir dir1;
+            dir1.mkdir("/var/ftp/ALTLinux");
+        }
+
         str_mirror = "sisyphus-mirror -i -c /etc/mp-gui.d/sisyphus-mirror/sisyphus-mirror.config";
         emit sendData(str_mirror);
     }
