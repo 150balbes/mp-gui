@@ -87,7 +87,7 @@ void MainWindow::onButtonSend()
     }
     else
     {
-        str_pro = "ARCH=" + ui->cb_arch->currentText() + str_builddir + " -C " + str_profiles  + " " + ui->comboBox_ListDistro->currentText();
+        str_pro = " ARCH=" + ui->cb_arch->currentText() + str_builddir + " -C " + str_profiles  + " " + ui->comboBox_ListDistro->currentText();
     }
     str_make = "make " + str_check + str_aptconf + str_pro;
     emit sendData(str_make);
