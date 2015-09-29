@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>740</width>
-    <height>470</height>
+    <width>736</width>
+    <height>466</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -251,8 +251,8 @@
    <widget class="QCheckBox" name="checkBox_Check">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>10</y>
+      <x>380</x>
+      <y>130</y>
       <width>311</width>
       <height>20</height>
      </rect>
@@ -285,6 +285,19 @@
     </property>
     <property name="text">
      <string>Загрузить настройки</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_mirror">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>20</y>
+      <width>131</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sisyphus-mirror</string>
     </property>
    </widget>
   </widget>

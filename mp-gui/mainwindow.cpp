@@ -41,6 +41,15 @@ MainWindow::~MainWindow()
 
 void MainWindow::onButtonSend()
 {
+    QString str_mirror;
+    if (ui->checkBox_mirror->checkState())
+    {
+        str_mirror = "sisyphus-mirror -i -c /etc/mp-gui.d/sisyphus-mirror/sisyphus-mirror.config";
+        emit sendData(str_mirror);
+    }
+    else
+    {
+
     QDir dir_out(QDir::homePath()+"/out");
     if (!QDir(dir_out).exists())
     {
@@ -91,6 +100,7 @@ void MainWindow::onButtonSend()
     }
     str_make = "make " + str_check + str_aptconf + str_pro;
     emit sendData(str_make);
+    }
 }
 
 void MainWindow::on_pushButton_DirProfiles_clicked()
