@@ -1,6 +1,6 @@
 Name:		mp-gui
 Version:	0.0.2
-Release:	alt2
+Release:	alt3
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -34,18 +34,18 @@ install -pD -m755 %SOURCE1 %buildroot%_bindir/%name
 install -pD -m644 %SOURCE2 %buildroot%_desktopdir/%name.desktop
 install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 mkdir -p %buildroot%_sysconfdir/mp-gui.d
-tar xf %SOURCE4 -C %buildroot%_sysconfdir/mp-gui.d/
+tar xf %SOURCE4 -C %buildroot%_sysconfdir/
 
 %files
 %_bindir/%name
 %_desktopdir/*
 %_liconsdir/*
-%config(noreplace) %_sysconfdir/%name.d/*
 %_sysconfdir/%name.d/*
 
 %changelog
-* Tue Sep 29 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt2
+* Tue Sep 29 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt3
 - add apt.config
+- %config(noreplace) %_sysconfdir/%name.d/*
 
 * Tue Sep 28 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt1
 - new version

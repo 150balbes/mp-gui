@@ -129,7 +129,7 @@ void MainWindow::slotDataOnStdoutList()
 
 void MainWindow::on_pushButton_AptConf_clicked()
 {
-    QString str = QFileDialog::getOpenFileName(0, "Open Dialog", "~/");
+    QString str = QFileDialog::getOpenFileName(0, "Open Dialog", "/etc/mp-gui.d/apt");
     ui->AptConf->setText(str);
 }
 
