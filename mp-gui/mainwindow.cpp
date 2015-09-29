@@ -51,7 +51,7 @@ void MainWindow::onButtonSend()
             dir1.mkdir("/var/ftp/ALTLinux");
         }
 
-        str_mirror = "sisyphus-mirror -i -c /etc/mp-gui.d/sisyphus-mirror/sisyphus-mirror.config";
+        str_mirror = "sisyphus-mirror -i -c /etc/mp-gui.d/sisyphus-mirror/sisyphus-mirror.conf";
         emit sendData(str_mirror);
     }
     else
