@@ -1,0 +1,5 @@
+# Local package resource list for APT goes here.
+# To inspect package defined part, see /etc/apt/sources.list.d/*.list
+rpm [alt] http://ftp.altlinux.org/pub/distributions/ALTLinux/t7/branch/ x86_64 classic
+rpm [alt] http://ftp.altlinux.org/pub/distributions/ALTLinux/t7/branch/ x86_64-i586 classic
+rpm [alt] http://ftp.altlinux.org/pub/distributions/ALTLinux/t7/branch/ noarch classic
