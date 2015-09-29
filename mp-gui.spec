@@ -1,19 +1,18 @@
 Name:		mp-gui
 Version:	0.0.2
-Release:	alt1
+Release:	alt2
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
 Group:		System/Configuration/Packaging
 URL:		https://github.com/150balbes/mp-gui
-
 Packager:	Oleg Ivanov <Leo-sp150@yandex.ru>
 
 Source0:	%name-%version.tar.gz
 Source1:	%name.bin
 Source2:	%name.desktop
 Source3:	%name.png
-
+Source4:	%name.d.tar
 
 BuildRequires: gcc-c++ libqt4-devel desktop-file-utils
 Requires: mkimage-profiles qt4-styles-qtcurve
@@ -34,13 +33,20 @@ DESTDIR=%buildroot PREFIX=/usr qmake-qt4 %name.pro
 install -pD -m755 %SOURCE1 %buildroot%_bindir/%name
 install -pD -m644 %SOURCE2 %buildroot%_desktopdir/%name.desktop
 install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
+mkdir -p %buildroot%_sysconfdir/mp-gui.d
+tar xf %SOURCE4 -C %buildroot%_sysconfdir/mp-gui.d/
 
 %files
 %_bindir/%name
 %_desktopdir/*
 %_liconsdir/*
+%config(noreplace) %_sysconfdir/%name.d/*
+%_sysconfdir/%name.d/*
 
 %changelog
+* Tue Sep 29 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt2
+- add apt.config
+
 * Tue Sep 28 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.2-alt1
 - new version
 

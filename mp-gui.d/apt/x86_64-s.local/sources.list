@@ -1,0 +1,4 @@
+# Local package resource list for APT goes here.
+# To inspect package defined part, see /etc/apt/sources.list.d/*.list
+rpm file:///var/ftp/ALTLinux/Sisyphus/ x86_64 classic
+rpm file:///var/ftp/ALTLinux/Sisyphus/ noarch classic
