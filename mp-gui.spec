@@ -1,6 +1,6 @@
 Name:		mp-gui
 Version:	0.0.3
-Release:	alt3
+Release:	alt4
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -16,6 +16,7 @@ Source4:	%name.d.tar
 
 BuildRequires: gcc-c++ libqt4-devel desktop-file-utils
 Requires: mkimage-profiles qt4-styles-qtcurve
+Requires: sisyphus-mirror
 
 %description
 Graphical application for mkimage-profiles.
@@ -43,6 +44,9 @@ tar xf %SOURCE4 -C %buildroot%_sysconfdir/
 %_sysconfdir/%name.d/*
 
 %changelog
+* Tue Sep 29 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.3-alt4
+- add sisyphus-mirror
+
 * Tue Sep 29 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.3-alt3
 - add apt.config
 
