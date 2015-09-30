@@ -1,6 +1,6 @@
 Name:		mp-gui
-Version:	0.0.3
-Release:	alt5
+Version:	0.0.4
+Release:	alt1
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -44,7 +44,7 @@ tar xf %SOURCE4 -C %buildroot%_sysconfdir/
 %_sysconfdir/%name.d/*
 
 %changelog
-* Tue Sep 29 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.3-alt5
+* Tue Sep 30 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.4-alt1
 - add sisyphus-mirror
 
 * Tue Sep 29 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.3-alt3
