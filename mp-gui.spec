@@ -34,10 +34,10 @@ DESTDIR=%buildroot PREFIX=/usr qmake-qt4 %name.pro
 install -pD -m755 %SOURCE1 %buildroot%_bindir/%name
 install -pD -m644 %SOURCE2 %buildroot%_desktopdir/%name.desktop
 install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
-install -d -m644 %buildroot/var/ftp/ALTLinux
-#mkdir -p %buildroot%_sysconfdir/mp-gui.d
+mkdir -p %buildroot%_sysconfdir/mp-gui.d
 tar xf %SOURCE4 -C %buildroot%_sysconfdir/
-mkdir -p %buildroot/var/ftp/ALTLinux
+#mkdir -p %buildroot/var/ftp/ALTLinux
+install -d -m644 %buildroot/var/ftp/ALTLinux
 
 
 %files
