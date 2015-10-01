@@ -1,6 +1,6 @@
 Name:		mp-gui
 Version:	0.0.4
-Release:	alt1
+Release:	alt2
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -36,14 +36,20 @@ install -pD -m644 %SOURCE2 %buildroot%_desktopdir/%name.desktop
 install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 mkdir -p %buildroot%_sysconfdir/mp-gui.d
 tar xf %SOURCE4 -C %buildroot%_sysconfdir/
+mkdir -p %buildroot/var/ftp/ALTLinux
+
 
 %files
 %_bindir/%name
 %_desktopdir/*
 %_liconsdir/*
 %_sysconfdir/%name.d/*
+%dir /var/ftp/ALTLinux
 
 %changelog
+* Tue Oct 10 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.4-alt2
+- edit repo
+
 * Tue Sep 30 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.4-alt1
 - add sisyphus-mirror
 

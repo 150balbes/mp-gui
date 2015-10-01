@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>440</width>
-    <height>470</height>
+    <width>438</width>
+    <height>468</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,12 +41,12 @@
     <rect>
      <x>10</x>
      <y>430</y>
-     <width>151</width>
+     <width>171</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>Запуск сборки</string>
+    <string>Выполнить команду</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -59,7 +59,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Сборочная комманда</string>
+    <string>Исполняемая комманда</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">

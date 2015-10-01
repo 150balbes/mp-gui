@@ -24,6 +24,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(make_process, SIGNAL(readyReadStandardOutput()), SLOT(slotDataOnStdoutList()));
 
     myform = new Form();
+
     connect(ui->pushButton_RunCreate, SIGNAL(clicked()), myform, SLOT(show()));
     connect(ui->pushButton_RunCreate, SIGNAL(clicked()), this, SLOT(onButtonSend()));
     connect(this, SIGNAL(sendData(QString)), myform, SLOT(recieveData(QString)));
@@ -42,16 +43,40 @@ MainWindow::~MainWindow()
 void MainWindow::onButtonSend()
 {
     QString str_mirror;
+    QString str_branch1;
+    QString str_branch2;
     if (ui->checkBox_mirror->checkState())
     {
-        QDir dir_out1("/var/ftp/ALTLinux");
-        if (!QDir(dir_out1).exists())
+        QMessageBox msgBox;
+        msgBox.setText("ВНИМАНИЕ !!!! \n Будет запущено скачивание ВСЕХ пакетов из отмеченных сетевых репозиториев \
+ в каталог /var/ftp/ALTLinux/ \n Это может занимать много времени и до 180 Гб места в разделе var !!!! \n Для \
+ исключения из процесса копирования части пакетов, можно воспользоваться сервисом \
+ \n http://sisyphus.ru/rsync/ \n Cформировать там список ИСКЛЮЧАЕМЫХ пакетов и скопировать его \
+ в файл \n /etc/mp-gui.d/sisyphus-mirror/exclude ");
+        msgBox.move(400, 300);
+        msgBox.exec();
+       if (ui->checkBox_sisyphus->checkState())
         {
-            QDir dir1;
-            dir1.mkdir("/var/ftp/ALTLinux");
+               str_branch1 = "Sisyphus ";
         }
-
-        str_mirror = "sisyphus-mirror -i -c /etc/mp-gui.d/sisyphus-mirror/sisyphus-mirror.conf";
+       if (ui->checkBox_p7->checkState())
+        {
+               str_branch1 += "p7/branch ";
+        }
+       if (ui->checkBox_t7->checkState())
+        {
+               str_branch1 += "t7/branch ";
+        }
+       if (ui->checkBox_p6->checkState())
+        {
+               str_branch1 += "p6/branch ";
+        }
+       if (ui->checkBox_t6->checkState())
+        {
+               str_branch1 += "t6/branch ";
+        }
+        str_branch2 = "\"" + str_branch1 + "\"";
+        str_mirror = "sisyphus-mirror -i -c /etc/mp-gui.d/sisyphus-mirror/sisyphus-mirror.conf -l " + str_branch2;
         emit sendData(str_mirror);
     }
     else
@@ -146,7 +171,7 @@ void MainWindow::slotDataOnStdoutList()
 
 void MainWindow::on_pushButton_AptConf_clicked()
 {
-    QString str = QFileDialog::getOpenFileName(0, "Open Dialog", "/etc/mp-gui.d/apt");
+    QString str = QFileDialog::getOpenFileName(0, "Open Dialog", "/etc/mp-gui.d/apt/apt-conf/");
     ui->AptConf->setText(str);
 }
 
@@ -169,6 +194,7 @@ void MainWindow::on_pushButton_git_clicked()
         {
             QMessageBox msgBox;
             msgBox.setText("Каталог mkimage-profiles уже существует.");
+            msgBox.move(200, 200);
             msgBox.exec();
     }
 }

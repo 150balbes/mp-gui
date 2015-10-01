@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>736</width>
-    <height>466</height>
+    <width>732</width>
+    <height>462</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,7 +37,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Запуск сборки выбранного образа</string>
+     <string>Выполнить</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -244,7 +244,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Сборка образа с внесёнными изменениями  из выбранного каталога (без обращения к мета-профилю)</string>
+      <string>Пересобрать образ из выбранного каталога (без обращения к мета-профилю)</string>
      </property>
     </widget>
    </widget>
@@ -287,18 +287,96 @@
      <string>Загрузить настройки</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_mirror">
+   <widget class="QGroupBox" name="groupBox_5">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>20</y>
-      <width>131</width>
-      <height>18</height>
+      <x>10</x>
+      <y>330</y>
+      <width>701</width>
+      <height>81</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Sisyphus-mirror</string>
+    <property name="title">
+     <string>Создание локальных зеркал репозиториев (пакетов)</string>
     </property>
+    <widget class="QCheckBox" name="checkBox_mirror">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>621</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Запустить процесс копирования пакетов из сети в локальный каталог /var/ftp/ALTLinux</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_sisyphus">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sisyphus</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_p7">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>60</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>p7/branch</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_t7">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>60</y>
+       <width>87</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>t7/branch</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_p6">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>60</y>
+       <width>87</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>p6/branch</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_t6">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>60</y>
+       <width>87</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>t6/branch</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
