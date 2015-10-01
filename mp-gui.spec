@@ -45,7 +45,7 @@ install -d -m644 %buildroot/var/ftp/ALTLinux
 %_desktopdir/*
 %_liconsdir/*
 %_sysconfdir/%name.d/*
-/var/ftp/ALTLinux
+#/var/ftp/ALTLinux
 
 %changelog
 * Tue Oct 10 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.4-alt2
