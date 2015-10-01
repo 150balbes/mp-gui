@@ -34,7 +34,8 @@ DESTDIR=%buildroot PREFIX=/usr qmake-qt4 %name.pro
 install -pD -m755 %SOURCE1 %buildroot%_bindir/%name
 install -pD -m644 %SOURCE2 %buildroot%_desktopdir/%name.desktop
 install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
-mkdir -p %buildroot%_sysconfdir/mp-gui.d
+install -d -m644 %buildroot/var/ftp/ALTLinux
+#mkdir -p %buildroot%_sysconfdir/mp-gui.d
 tar xf %SOURCE4 -C %buildroot%_sysconfdir/
 mkdir -p %buildroot/var/ftp/ALTLinux
 
@@ -44,7 +45,7 @@ mkdir -p %buildroot/var/ftp/ALTLinux
 %_desktopdir/*
 %_liconsdir/*
 %_sysconfdir/%name.d/*
-%dir /var/ftp/ALTLinux
+/var/ftp/ALTLinux
 
 %changelog
 * Tue Oct 10 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.4-alt2
