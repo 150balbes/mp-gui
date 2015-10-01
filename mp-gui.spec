@@ -39,7 +39,7 @@ tar xf %SOURCE4 -C %buildroot%_sysconfdir/
 
 %post
 mkdir -p /var/ftp/ALTLinux
-chmod 666 /var/ftp/ALTLinux
+chmod 777 /var/ftp/ALTLinux
 
 %files
 %_bindir/%name
