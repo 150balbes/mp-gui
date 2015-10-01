@@ -48,7 +48,7 @@ chmod 777 /var/ftp/ALTLinux
 %_sysconfdir/%name.d/*
 
 %changelog
-* Tue Oct 10 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.4-alt2
+* Tue Oct 01 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.5-alt1
 - edit repo
 
 * Tue Sep 30 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.4-alt1
