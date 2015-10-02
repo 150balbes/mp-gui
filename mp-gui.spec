@@ -1,6 +1,6 @@
 Name:		mp-gui
 Version:	0.0.5
-Release:	alt2
+Release:	alt3
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -50,7 +50,7 @@ chmod 777 /var/ftp/ALTLinux
 
 %changelog
 * Tue Oct 01 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.5-alt2
-- m-p >= 1.1.75-alt2
+- m-p >= 1.1.75-alt3
 
 * Tue Oct 01 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.5-alt1
 - edit repo
