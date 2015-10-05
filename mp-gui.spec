@@ -1,6 +1,6 @@
 Name:		mp-gui
 Version:	0.0.5
-Release:	p7-alt5
+Release:	alt5.P7
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -50,7 +50,7 @@ chmod 666 /etc/mp-gui.d/sisyphus-mirror/*
 %_sysconfdir/%name.d/*
 
 %changelog
-* Tue Oct 05 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.5-p7-alt5
+* Tue Oct 05 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.5-alt5.P7
 - add branch p7
 
 * Tue Oct 01 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.5-alt4
