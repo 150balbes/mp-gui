@@ -1,6 +1,6 @@
 Name:		mp-gui
 Version:	0.0.5
-Release:	alt5
+Release:	alt6
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -41,7 +41,7 @@ tar xf %SOURCE4 -C %buildroot%_sysconfdir/
 %post
 mkdir -p /var/ftp/ALTLinux
 chmod 777 /var/ftp/ALTLinux
-chmod 666 /etc/mp-gui.d/sisyphus-mirror/*
+chmod 666 /etc/mp-gui.d/*
 
 %files
 %_bindir/%name
@@ -50,6 +50,9 @@ chmod 666 /etc/mp-gui.d/sisyphus-mirror/*
 %_sysconfdir/%name.d/*
 
 %changelog
+* Tue Oct 07 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.5-alt6
+- edit chmod
+
 * Tue Oct 05 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.5-alt5
 - edit Group
 
