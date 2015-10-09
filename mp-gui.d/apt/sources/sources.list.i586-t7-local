@@ -1,4 +1,4 @@
 # Local package resource list for APT goes here.
 # To inspect package defined part, see /etc/apt/sources.list.d/*.list
-rpm file:///var/ftp/ALTLinux/t7/branch/ i586 classic
-rpm file:///var/ftp/ALTLinux/t7/branch/ noarch classic
+rpm file:/var/ftp/ALTLinux/t7/branch/ i586 classic
+rpm file:/var/ftp/ALTLinux/t7/branch/ noarch classic
