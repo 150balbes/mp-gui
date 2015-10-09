@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>732</width>
-    <height>462</height>
+    <width>730</width>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -377,6 +377,49 @@
       <string>t6/branch</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QComboBox" name="cb_Clean">
+    <property name="geometry">
+     <rect>
+      <x>607</x>
+      <y>10</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>14</y>
+      <width>281</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Уровень очистки промежуточных данных</string>
+    </property>
    </widget>
   </widget>
  </widget>
