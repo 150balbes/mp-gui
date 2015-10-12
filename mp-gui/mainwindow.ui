@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>730</width>
-    <height>460</height>
+    <width>740</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>640</x>
-      <y>430</y>
+      <y>440</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>430</y>
+      <y>440</y>
       <width>261</width>
       <height>31</height>
      </rect>
@@ -252,7 +252,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>130</y>
+      <y>140</y>
       <width>311</width>
       <height>20</height>
      </rect>
@@ -265,7 +265,7 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>430</y>
+      <y>440</y>
       <width>181</width>
       <height>31</height>
      </rect>
@@ -278,7 +278,7 @@
     <property name="geometry">
      <rect>
       <x>470</x>
-      <y>430</y>
+      <y>440</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -419,6 +419,19 @@
     </property>
     <property name="text">
      <string>Уровень очистки промежуточных данных</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_BELL_ICEX">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>110</y>
+      <width>341</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Проиграть звук после сборки</string>
     </property>
    </widget>
   </widget>

@@ -1,6 +1,6 @@
 Name:		mp-gui
-Version:	0.0.6
-Release:	alt3
+Version:	0.0.7
+Release:	alt1
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -18,6 +18,7 @@ BuildRequires: gcc-c++ libqt4-devel desktop-file-utils
 Requires: mkimage-profiles >= 1.1.75-alt3
 Requires: qt4-styles-qtcurve
 Requires: sisyphus-mirror
+Requires: icewm-startup-simple-sound
 
 %description
 Graphical application for mkimage-profiles.
@@ -52,6 +53,9 @@ chmod 666 /etc/mp-gui.d/apt/sources/*
 %_sysconfdir/%name.d/*
 
 %changelog
+* Tue Oct 12 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.7-alt1
+- add sounds
+
 * Tue Oct 08 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.6-alt3
 - edit apt sources
 
