@@ -1,0 +1,11 @@
+#!/bin/sh
+
+#sleep 3
+
+#if [ -e ~/.icewm/sounds/startup.wav ]; then
+#	aplay ~/.icewm/sounds/startup.wav
+#else
+#    if [ -e /usr/share/X11/icewm/sounds/startup.wav ]; then
+	aplay /etc/mp-gui.d/sounds/startup.wav
+#    fi
+#fi
