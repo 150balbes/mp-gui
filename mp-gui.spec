@@ -15,7 +15,7 @@ Source3:	%name.png
 Source4:	%name.d.tar
 
 BuildRequires: gcc-c++ libqt4-devel desktop-file-utils
-Requires: mkimage-profiles >= 1.1.75-alt3
+Requires: mkimage-profiles >= 1.1.75-alt5
 Requires: qt4-styles-qtcurve
 Requires: sisyphus-mirror
 Requires: icewm-startup-simple-sound
