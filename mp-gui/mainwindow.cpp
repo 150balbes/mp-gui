@@ -109,14 +109,14 @@ void MainWindow::onButtonSend()
         str_check = "";
     }
 
-    QString str_bell_icex;
-    if (ui->checkBox_BELL_ICEX->checkState())
+    QString str_bell;
+    if (ui->checkBox_BELL_CMD->checkState())
     {
-        str_bell_icex = " BELL_ICEX=1";
+        str_bell = " BELL_CMD=1";
     }
     else
     {
-        str_bell_icex = "";
+        str_bell = "";
     }
 
 
@@ -145,7 +145,7 @@ void MainWindow::onButtonSend()
     }
     else
     {
-        str_pro = str_arch + str_clean + str_bell_icex + str_builddir + " -C " + str_profiles  + " " + ui->comboBox_ListDistro->currentText();
+        str_pro = str_arch + str_clean + str_bell + str_builddir + " -C " + str_profiles  + " " + ui->comboBox_ListDistro->currentText();
     }
     str_make = "make " + str_check + str_aptconf + str_pro;
     emit sendData(str_make);
