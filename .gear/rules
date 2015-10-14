@@ -1,4 +1,5 @@
 copy: *.desktop
+copy: *.bin
 copy: *.png
 tar.gz: mp-gui
 tar: mp-gui.d name=mp-gui.d
