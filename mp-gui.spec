@@ -47,7 +47,7 @@ chmod 666 /etc/mp-gui.d/apt/apt-conf/*
 chmod 666 /etc/mp-gui.d/apt/sources/*
 
 %files
-%_bindir/%name
+%_bindir/*
 %_desktopdir/*
 %_liconsdir/*
 %_sysconfdir/%name.d/*
