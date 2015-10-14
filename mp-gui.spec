@@ -1,6 +1,6 @@
 Name:		mp-gui
 Version:	0.0.7
-Release:	alt3
+Release:	alt4
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -9,7 +9,7 @@ URL:		https://github.com/150balbes/mp-gui
 Packager:	Oleg Ivanov <Leo-sp150@yandex.ru>
 
 Source0:	%name-%version.tar.gz
-Source1:	%name.bin
+#Source1:	%name.bin
 Source2:	%name.desktop
 Source3:	%name.png
 Source4:	%name.d.tar
@@ -33,7 +33,7 @@ DESTDIR=%buildroot PREFIX=/usr qmake-qt4 %name.pro
 
 %install
 %makeinstall
-install -pD -m755 %SOURCE1 %buildroot%_bindir/%name
+#install -pD -m755 %SOURCE1 %buildroot%_bindir/%name
 install -pD -m644 %SOURCE2 %buildroot%_desktopdir/%name.desktop
 install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 mkdir -p %buildroot%_sysconfdir/mp-gui.d
@@ -53,7 +53,7 @@ chmod 666 /etc/mp-gui.d/apt/sources/*
 %_sysconfdir/%name.d/*
 
 %changelog
-* Tue Oct 14 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.7-alt3
+* Tue Oct 14 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.7-alt4
 - edit form
 
 * Tue Oct 13 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.7-alt2
