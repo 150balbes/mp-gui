@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>738</width>
-    <height>478</height>
+    <width>736</width>
+    <height>476</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -176,7 +176,7 @@
       </rect>
      </property>
      <property name="text">
-      <string/>
+      <string>/etc/mp-gui.d/apt/apt-conf/x86_64-s</string>
      </property>
      <property name="readOnly">
       <bool>false</bool>
@@ -432,6 +432,9 @@
     </property>
     <property name="text">
      <string>Проиграть звук после сборки</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

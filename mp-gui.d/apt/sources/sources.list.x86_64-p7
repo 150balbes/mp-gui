@@ -3,3 +3,4 @@
 rpm http://ftp.altlinux.org/pub/distributions/ALTLinux/p7/branch/ x86_64 classic
 rpm http://ftp.altlinux.org/pub/distributions/ALTLinux/p7/branch/ x86_64-i586 classic
 rpm http://ftp.altlinux.org/pub/distributions/ALTLinux/p7/branch/ noarch classic
+rpm http://altlinuxclub.ru/repo/Repo_P7/ x86_64 hasher
