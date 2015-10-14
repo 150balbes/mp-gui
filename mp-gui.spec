@@ -9,7 +9,7 @@ URL:		https://github.com/150balbes/mp-gui
 Packager:	Oleg Ivanov <Leo-sp150@yandex.ru>
 
 Source0:	%name-%version.tar.gz
-#Source1:	%name.bin
+Source1:	%name.bin
 Source2:	%name.desktop
 Source3:	%name.png
 Source4:	%name.d.tar
@@ -33,7 +33,7 @@ DESTDIR=%buildroot PREFIX=/usr qmake-qt4 %name.pro
 
 %install
 %makeinstall
-#install -pD -m755 %SOURCE1 %buildroot%_bindir/%name
+install -pD -m755 %SOURCE1 %buildroot%_bindir/%name
 install -pD -m644 %SOURCE2 %buildroot%_desktopdir/%name.desktop
 install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 mkdir -p %buildroot%_sysconfdir/mp-gui.d
@@ -47,7 +47,7 @@ chmod 666 /etc/mp-gui.d/apt/apt-conf/*
 chmod 666 /etc/mp-gui.d/apt/sources/*
 
 %files
-%_bindir/*
+%_bindir/%name
 %_desktopdir/*
 %_liconsdir/*
 %_sysconfdir/%name.d/*
