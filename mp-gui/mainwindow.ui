@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>736</width>
-    <height>476</height>
+    <width>734</width>
+    <height>474</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -176,7 +176,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>/etc/mp-gui.d/apt/apt-conf/x86_64-s</string>
+      <string/>
      </property>
      <property name="readOnly">
       <bool>false</bool>
