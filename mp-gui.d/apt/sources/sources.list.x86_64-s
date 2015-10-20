@@ -3,4 +3,4 @@
 rpm http://ftp.altlinux.org/pub/distributions/ALTLinux/Sisyphus/ x86_64 classic
 rpm http://ftp.altlinux.org/pub/distributions/ALTLinux/Sisyphus/ x86_64-i586 classic
 rpm http://ftp.altlinux.org/pub/distributions/ALTLinux/Sisyphus/ noarch classic
-rpm http://altlinuxclub.ru/repo/Repo_P7/ x86_64 hasher
+rpm http://altlinuxclub.ru/repo/repo_s/ x86_64 hasher
