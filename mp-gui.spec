@@ -1,6 +1,6 @@
 Name:		mp-gui
-Version:	0.0.7
-Release:	alt5
+Version:	0.0.8
+Release:	alt1
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -9,13 +9,12 @@ URL:		https://github.com/150balbes/mp-gui
 Packager:	Oleg Ivanov <Leo-sp150@yandex.ru>
 
 Source0:	%name-%version.tar.gz
-Source1:	%name.bin
 Source2:	%name.desktop
 Source3:	%name.png
 Source4:	%name.d.tar
 
 BuildRequires: gcc-c++ libqt4-devel desktop-file-utils
-Requires: mkimage-profiles >= 1.1.76-alt2.mpgui
+Requires: mkimage-profiles >= 1.1.76-alt4.mpgui
 Requires: qt4-styles-qtcurve
 Requires: sisyphus-mirror
 Requires: aplay
@@ -33,7 +32,7 @@ DESTDIR=%buildroot PREFIX=/usr qmake-qt4 %name.pro
 
 %install
 %makeinstall
-install -pD -m755 %SOURCE1 %buildroot%_bindir/%name
+install -pD -m755 %name %buildroot%_bindir/%name
 install -pD -m644 %SOURCE2 %buildroot%_desktopdir/%name.desktop
 install -pD -m644 %SOURCE3 %buildroot%_liconsdir/%name.png
 mkdir -p %buildroot%_sysconfdir/mp-gui.d
@@ -53,6 +52,9 @@ chmod 666 /etc/mp-gui.d/apt/sources/*
 %_sysconfdir/%name.d/*
 
 %changelog
+* Tue Oct 20 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.8-alt1
+- new ver
+
 * Tue Oct 14 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.7-alt5
 - edit form
 
