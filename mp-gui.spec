@@ -1,6 +1,6 @@
 Name:		mp-gui
 Version:	0.0.8
-Release:	alt8
+Release:	alt2
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
