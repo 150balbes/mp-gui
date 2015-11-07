@@ -1,6 +1,6 @@
 Name:		mp-gui
 Version:	0.0.8
-Release:	alt1
+Release:	alt8
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -52,6 +52,9 @@ chmod 666 /etc/mp-gui.d/apt/sources/*
 %_sysconfdir/%name.d/*
 
 %changelog
+* Tue Nov 08 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.8-alt2
+- new desktop.png
+
 * Tue Oct 20 2015 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.8-alt1
 - new ver
 
