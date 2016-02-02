@@ -1,6 +1,6 @@
 Name:		mp-gui
 Version:	0.0.8
-Release:	alt3
+Release:	alt4
 Summary:	Graphical application for mkimage-profiles
 
 License:	GPL
@@ -52,6 +52,9 @@ chmod 666 /etc/mp-gui.d/apt/sources/*
 %_sysconfdir/%name.d/*
 
 %changelog
+* Tue Feb 02 2016 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.8-alt4
+- add tab
+
 * Tue Jan 04 2016 Oleg Ivanov <Leo-sp150@yandex.ru> 0.0.8-alt3
 - add Translator
 

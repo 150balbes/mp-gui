@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>734</width>
-    <height>474</height>
+    <width>740</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <widget class="QPushButton" name="pushButton_Exit">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>440</y>
-      <width>91</width>
+      <x>600</x>
+      <y>430</y>
+      <width>121</width>
       <height>31</height>
      </rect>
     </property>
@@ -31,8 +31,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>440</y>
-      <width>261</width>
+      <y>430</y>
+      <width>201</width>
       <height>31</height>
      </rect>
     </property>
@@ -40,232 +40,11 @@
      <string>Выполнить</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>101</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Архитектура</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="cb_arch">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>10</y>
-      <width>71</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>x86_64</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>i586</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>721</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Каталог с мета-профилем</string>
-    </property>
-    <widget class="QLineEdit" name="DirProfiles">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>261</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>/usr/share/mkimage-profiles</string>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_DirProfiles">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>30</y>
-       <width>100</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Обзор</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_git">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>390</x>
-       <y>30</y>
-       <width>321</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Скачать последнюю версию  мета-профиля</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>110</y>
-      <width>351</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Выбор образа для сборки</string>
-    </property>
-    <widget class="QComboBox" name="comboBox_ListDistro">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>20</y>
-       <width>341</width>
-       <height>31</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_3">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>170</y>
-      <width>721</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Выбор файла настроек apt.conf, если не указано, используются системные настройки.</string>
-    </property>
-    <widget class="QLineEdit" name="AptConf">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>581</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="readOnly">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_AptConf">
-     <property name="geometry">
-      <rect>
-       <x>620</x>
-       <y>30</y>
-       <width>91</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Обзор</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_4">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>240</y>
-      <width>721</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Выбор каталога  для генерируемого профиля и сборки, если не указан - автовыбор системой.</string>
-    </property>
-    <widget class="QPushButton" name="pushButton_BuildDir">
-     <property name="geometry">
-      <rect>
-       <x>620</x>
-       <y>30</y>
-       <width>91</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Обзор</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="BuildDir">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>581</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="readOnly">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkBox_ReMake">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>60</y>
-       <width>721</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Пересобрать образ из выбранного каталога (без обращения к мета-профилю)</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_Check">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>140</y>
-      <width>311</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Режим проверки без сборки образа</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_Settings">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>440</y>
+      <x>230</x>
+      <y>430</y>
       <width>181</width>
       <height>31</height>
      </rect>
@@ -277,8 +56,8 @@
    <widget class="QPushButton" name="pushButton_RedSet">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>440</y>
+      <x>420</x>
+      <y>430</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -287,155 +66,410 @@
      <string>Загрузить настройки</string>
     </property>
    </widget>
-   <widget class="QGroupBox" name="groupBox_5">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>330</y>
-      <width>701</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Создание локальных зеркал репозиториев (пакетов)</string>
-    </property>
-    <widget class="QCheckBox" name="checkBox_mirror">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>30</y>
-       <width>621</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Запустить процесс копирования пакетов из сети в локальный каталог /var/ftp/ALTLinux</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkBox_sisyphus">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>91</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Sisyphus</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkBox_p7">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>60</y>
-       <width>91</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>p7/branch</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkBox_t7">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>60</y>
-       <width>87</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>t7/branch</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkBox_p6">
-     <property name="geometry">
-      <rect>
-       <x>360</x>
-       <y>60</y>
-       <width>87</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>p6/branch</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="checkBox_t6">
-     <property name="geometry">
-      <rect>
-       <x>470</x>
-       <y>60</y>
-       <width>87</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>t6/branch</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QComboBox" name="cb_Clean">
-    <property name="geometry">
-     <rect>
-      <x>607</x>
+      <x>0</x>
       <y>10</y>
-      <width>111</width>
-      <height>23</height>
+      <width>741</width>
+      <height>401</height>
      </rect>
     </property>
-    <item>
-     <property name="text">
-      <string>2</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>1</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>0</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>14</y>
-      <width>281</width>
-      <height>20</height>
-     </rect>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
-    <property name="text">
-     <string>Уровень очистки промежуточных данных</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_BELL_CMD">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>110</y>
-      <width>341</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Проиграть звук после сборки</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Сборка образа</string>
+     </attribute>
+     <widget class="QCheckBox" name="checkBox_BELL_CMD">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>110</y>
+        <width>341</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Проиграть звук после сборки</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_arch">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>10</y>
+        <width>71</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>x86_64</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>i586</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>351</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Выбор образа для сборки</string>
+      </property>
+      <widget class="QComboBox" name="comboBox_ListDistro">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>341</width>
+         <height>31</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QComboBox" name="cb_Clean">
+      <property name="geometry">
+       <rect>
+        <x>607</x>
+        <y>10</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>14</y>
+        <width>281</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Уровень очистки промежуточных данных</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_Check">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>140</y>
+        <width>311</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Режим проверки без сборки образа</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>721</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Выбор каталога  для генерируемого профиля и сборки, если не указан - автовыбор системой.</string>
+      </property>
+      <widget class="QPushButton" name="pushButton_BuildDir">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>30</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Обзор</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="BuildDir">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>581</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_ReMake">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>60</y>
+         <width>721</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Пересобрать образ из выбранного каталога (без обращения к мета-профилю)</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Архитектура</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>721</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Выбор файла настроек apt.conf, если не указано, используются системные настройки.</string>
+      </property>
+      <widget class="QLineEdit" name="AptConf">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>581</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_AptConf">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>30</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Обзор</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>721</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Каталог с мета-профилем</string>
+      </property>
+      <widget class="QLineEdit" name="DirProfiles">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>261</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>/usr/share/mkimage-profiles</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_DirProfiles">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>30</y>
+         <width>100</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Обзор</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_git">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>30</y>
+         <width>321</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Скачать последнюю версию  мета-профиля</string>
+       </property>
+      </widget>
+     </widget>
+     <zorder>groupBox_5</zorder>
+     <zorder>checkBox_BELL_CMD</zorder>
+     <zorder>cb_arch</zorder>
+     <zorder>groupBox_2</zorder>
+     <zorder>cb_Clean</zorder>
+     <zorder>label</zorder>
+     <zorder>checkBox_Check</zorder>
+     <zorder>groupBox_4</zorder>
+     <zorder>label_4</zorder>
+     <zorder>groupBox_3</zorder>
+     <zorder>groupBox</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Создание локальной копии пакетов</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>701</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Создание локальных зеркал репозиториев (пакетов)</string>
+      </property>
+      <widget class="QCheckBox" name="checkBox_mirror">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>621</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Запустить процесс копирования пакетов из сети в локальный каталог /var/ftp/ALTLinux</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_sisyphus">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>91</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sisyphus</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_p7">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>60</y>
+         <width>91</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>p7/branch</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_t7">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>60</y>
+         <width>87</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>t7/branch</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_p6">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>60</y>
+         <width>87</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>p6/branch</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_t6">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>60</y>
+         <width>87</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>t6/branch</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
    </widget>
   </widget>
  </widget>
